@@ -7,34 +7,31 @@ file.close
 
 UsedWords = []
 LastLiteralBot = ""
-#print("Введите слово")
-global WhoStartsRandom
 WhoStartsRandom = random.randrange(0, 2)
 def StartBot():
     BotWord = wordlist[random.randrange(0, len(wordlist))]
     print(BotWord)
-    if (BotWord[-2] == 'ь'):
+    if (BotWord[-2] == 'ь' or BotWord[-2] == 'ъ' or BotWord[-2] == 'ы'):
             LastLiteralBot = BotWord[-3]
     else:
             LastLiteralBot = BotWord[-2]
     UsedWords.append(BotWord)
 
-
 while True:
     if (WhoStartsRandom == 1):
         StartBot()
-        WhoStartsRandom = 0
-    elif (WhoStartsRandom == 0):
-        print("Введите слово")
         WhoStartsRandom = 'none'
+    if (WhoStartsRandom == 0):
+        print("Введите слово")
+        WhoStartsRandom = "none"
     MyWord = input()
-    if (MyWord == " " or MyWord == ""):
+    if (MyWord == " "):
         print("Пожалуйста, введите слово.")
         continue
     if(MyWord[0] != LastLiteralBot and LastLiteralBot != ""):
         print("Слово должно начинаться на букву", LastLiteralBot)
         continue
-    if (MyWord[-1] == 'ь'):
+    if (MyWord[-1] == 'ь' or MyWord[-1] == 'ъ' or MyWord[-1] == 'ы' ):
         MyLastLiteral = MyWord[-2]
     else:
         MyLastLiteral = MyWord[-1]
@@ -61,7 +58,7 @@ while True:
     BotWord = wordlist[random.randrange(StartOfRange, EndOfRange+1)]
     print (BotWord)
     
-    if (BotWord[-2] == 'ь'):
+    if (BotWord[-2] == 'ь' or BotWord[-2] == 'ъ' or BotWord[-2] == 'ы' ):
         LastLiteralBot = BotWord[-3]
     else:
         LastLiteralBot = BotWord[-2]
@@ -70,5 +67,3 @@ while True:
     UsedWords.append(BotWord)
 
     #print(UsedWords)
-
-    
