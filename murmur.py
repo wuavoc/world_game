@@ -21,11 +21,8 @@ while True:
     if (WhoStartsRandom == 1):
         StartBot()
         WhoStartsRandom = 0
-    elif (WhoStartsRandom == 0):
-        print("Введите слово")
-        WhoStartsRandom = 'none'
     MyWord = input()
-    if (MyWord == " " or MyWord == ""):
+    if (MyWord == " "):
         print("Пожалуйста, введите слово.")
         continue
     if(MyWord[0] != LastLiteralBot and LastLiteralBot != ""):
