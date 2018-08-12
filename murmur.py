@@ -16,8 +16,7 @@ def StartBot():
     else:
             LastLiteralBot = BotWord[-2]
     UsedWords.append(BotWord)
-
-
+    
 while True:
     if (WhoStartsRandom == 1):
         StartBot()
@@ -54,19 +53,12 @@ while True:
             EndOfRange = WordNumber
     if (EndOfRange == -1):
         print("Слов не найдено. Ты выиграл!")
-        sys.exit()
-    
+        sys.exit()  
     BotWord = wordlist[random.randrange(StartOfRange, EndOfRange+1)]
-    print (BotWord)
-    
+    print (BotWord)  
     if (BotWord[-2] == 'ь'):
         LastLiteralBot = BotWord[-3]
     else:
         LastLiteralBot = BotWord[-2]
-
     UsedWords.append(MyWord)
     UsedWords.append(BotWord)
-
-    #print(UsedWords)
-
-    
