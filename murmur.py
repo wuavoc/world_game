@@ -16,11 +16,19 @@ def StartBot():
     else:
             LastLiteralBot = BotWord[-2]
     UsedWords.append(BotWord)
+<<<<<<< HEAD
 
 while True:
     if (WhoStartsRandom == 1):
         StartBot()
         WhoStartsRandom = 'none'
+=======
+    
+while True:
+    if (WhoStartsRandom == 1):
+        StartBot()
+        WhoStartsRandom = "none"
+>>>>>>> 9a17279ac0d280687f271e989893b09945b8f5b2
     if (WhoStartsRandom == 0):
         print("Введите слово")
         WhoStartsRandom = "none"
@@ -53,17 +61,22 @@ while True:
             EndOfRange = WordNumber
     if (EndOfRange == -1):
         print("Слов не найдено. Ты выиграл!")
-        sys.exit()
-    
+        sys.exit()  
     BotWord = wordlist[random.randrange(StartOfRange, EndOfRange+1)]
+<<<<<<< HEAD
     print (BotWord)
     
     if (BotWord[-2] == 'ь' or BotWord[-2] == 'ъ' or BotWord[-2] == 'ы' ):
+=======
+    print (BotWord)  
+    if (BotWord[-2] == 'ь'):
+>>>>>>> 9a17279ac0d280687f271e989893b09945b8f5b2
         LastLiteralBot = BotWord[-3]
     else:
         LastLiteralBot = BotWord[-2]
-
     UsedWords.append(MyWord)
     UsedWords.append(BotWord)
-
-    #print(UsedWords)
+<<<<<<< HEAD
+ 
+=======
+>>>>>>> 9a17279ac0d280687f271e989893b09945b8f5b2
