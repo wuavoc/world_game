@@ -20,7 +20,10 @@ def StartBot():
 while True:
     if (WhoStartsRandom == 1):
         StartBot()
-        WhoStartsRandom = 0
+        WhoStartsRandom = "none"
+    if (WhoStartsRandom == 0):
+        print("Введите слово")
+        WhoStatsRandom = "none"
     MyWord = input()
     if (MyWord == " "):
         print("Пожалуйста, введите слово.")
