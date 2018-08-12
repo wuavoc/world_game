@@ -23,7 +23,7 @@ while True:
         WhoStartsRandom = "none"
     if (WhoStartsRandom == 0):
         print("Введите слово")
-        WhoStatsRandom = "none"
+        WhoStartsRandom = "none"
     MyWord = input()
     if (MyWord == " "):
         print("Пожалуйста, введите слово.")
