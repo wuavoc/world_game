@@ -7,8 +7,6 @@ file.close
 
 UsedWords = []
 LastLiteralBot = ""
-#print("Введите слово")
-global WhoStartsRandom
 WhoStartsRandom = random.randrange(0, 2)
 def StartBot():
     BotWord = wordlist[random.randrange(0, len(wordlist))]
