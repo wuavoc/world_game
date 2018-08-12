@@ -65,3 +65,4 @@ while True:
 
     UsedWords.append(MyWord)
     UsedWords.append(BotWord)
+#Такие вот дела
